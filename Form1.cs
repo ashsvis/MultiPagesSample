@@ -13,14 +13,15 @@ namespace MultiPagesSample
             InitializeComponent();
         }
 
-        private void InsertPage(string pageName)
+        private void InsertPage(string pageName, Type pageType)
         {
             UserControl page;
             if (pages.ContainsKey(pageName))
                 page = pages[pageName];
             else
             {
-                page = new UserControl1() { Dock = DockStyle.Fill };
+                page = (UserControl) Activator.CreateInstance(pageType);
+                page.Dock = DockStyle.Fill;
                 pages.Add(pageName, page);
             }
             panelCenter.Controls.Clear();
@@ -29,17 +30,12 @@ namespace MultiPagesSample
 
         private void button1_Click(object sender, EventArgs e)
         {
-            InsertPage("Panel1");
+            InsertPage("Panel1", typeof(UserControl1));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            InsertPage("Panel2");
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            InsertPage("Panel3");
+            InsertPage("Panel2", typeof(UserControl2));
         }
     }
 }

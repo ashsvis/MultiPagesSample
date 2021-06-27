@@ -31,10 +31,9 @@ namespace MultiPagesSample
         {
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.panelCenter = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panelCenter = new System.Windows.Forms.Panel();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +47,6 @@ namespace MultiPagesSample
             // 
             // panelTop
             // 
-            this.panelTop.Controls.Add(this.button3);
             this.panelTop.Controls.Add(this.button2);
             this.panelTop.Controls.Add(this.button1);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -56,24 +54,6 @@ namespace MultiPagesSample
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(719, 67);
             this.panelTop.TabIndex = 1;
-            // 
-            // panelCenter
-            // 
-            this.panelCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCenter.Location = new System.Drawing.Point(81, 67);
-            this.panelCenter.Name = "panelCenter";
-            this.panelCenter.Size = new System.Drawing.Size(719, 383);
-            this.panelCenter.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(16, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 41);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -85,15 +65,23 @@ namespace MultiPagesSample
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // button1
             // 
-            this.button3.Location = new System.Drawing.Point(178, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 41);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button1.Location = new System.Drawing.Point(16, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 41);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panelCenter
+            // 
+            this.panelCenter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCenter.Location = new System.Drawing.Point(81, 67);
+            this.panelCenter.Name = "panelCenter";
+            this.panelCenter.Size = new System.Drawing.Size(719, 383);
+            this.panelCenter.TabIndex = 2;
             // 
             // Form1
             // 
@@ -115,7 +103,6 @@ namespace MultiPagesSample
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Panel panelCenter;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
     }
